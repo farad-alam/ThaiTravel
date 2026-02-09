@@ -92,7 +92,7 @@ export default async function HomePage() {
             <div className="relative">
               <div className="relative w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <Image
-                  src="/images/hero-dog.png"
+                  src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?q=80&w=2670&auto=format&fit=crop"
                   alt="Beautiful Thailand beach landscape"
                   className="object-cover"
                   fill
