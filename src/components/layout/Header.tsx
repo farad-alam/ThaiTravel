@@ -27,7 +27,7 @@ export default async function Header() {
                 alt={settings.logo?.alt || settings.title || undefined}
               />
               <span className="text-lg md:text-2xl font-bold">
-                {settings.title}
+                {settings.headerTitle || settings.title}
               </span>
             </Link>
           )}

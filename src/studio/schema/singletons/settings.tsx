@@ -21,6 +21,13 @@ export default defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: 'headerTitle',
+      title: 'Header Title',
+      type: 'string',
+      description: 'Text displayed next to the logo in the header. If empty, uses the main Title.',
+      initialValue: 'ThaiTravel',
+    }),
+    defineField({
       name: 'logo',
       title: 'Site Logo',
       type: 'image',

@@ -10,6 +10,7 @@ import {
 
 export const settingsQuery = defineQuery(`*[_type == "settings"][0]{
   title,
+  headerTitle,
   description,
   logo {
     asset-> {
