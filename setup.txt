@@ -1,0 +1,4 @@
+1. Sanity project creation -> Cross Origin setup (Localhost)
+2. Replace .env.local with Newly created sanity details
+3. Replace "Ignite for Sanity" with "ThaiTravel Admin" in sanity.config.ts
+4. 
