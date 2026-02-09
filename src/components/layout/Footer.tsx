@@ -38,7 +38,7 @@ export default async function Footer() {
                 alt={settings.logo?.alt || settings.title || undefined}
               />
               <h3 className="text-lg font-semibold">
-                {settings.footerTitle || settings.title}
+                {settings.headerTitle || settings.title}
               </h3>
             </Link>
             <p className="text-sm">{settings.description}</p>

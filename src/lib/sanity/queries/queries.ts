@@ -11,7 +11,7 @@ import {
 export const settingsQuery = defineQuery(`*[_type == "settings"][0]{
   title,
   headerTitle,
-  footerTitle,
+
   description,
   logo {
     asset-> {
