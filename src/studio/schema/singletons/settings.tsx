@@ -28,6 +28,13 @@ export default defineType({
       initialValue: 'ThaiTravel',
     }),
     defineField({
+      name: 'footerTitle',
+      title: 'Footer Title',
+      type: 'string',
+      description: 'Text displayed next to the logo in the footer. If empty, uses the main Title.',
+      initialValue: 'ThaiTravel',
+    }),
+    defineField({
       name: 'logo',
       title: 'Site Logo',
       type: 'image',
