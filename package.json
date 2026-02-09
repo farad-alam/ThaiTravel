@@ -17,7 +17,7 @@
     "build": "npm run sanity:typegen && next build",
     "vercel-build": "npm run sanity:typegen && next build",
     "start": "npm run next:start",
-    "sanity:typegen": "sanity schema extract --path=.sanity/schema.json && sanity typegen generate",
+    "sanity:typegen": "node -e \"const fs = require('fs'); if (!fs.existsSync('.sanity')) fs.mkdirSync('.sanity');\" && sanity schema extract --path=.sanity/schema.json && sanity typegen generate",
     "typecheck": "tsc --noEmit",
     "watch-typegen": "tsx watch-typegen.ts",
     "test": "vitest",
