@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { defineQuery } from 'next-sanity';
 import { sanityFetch } from '@/lib/sanity/client/live';
+import { settingsQuery } from '@/lib/sanity/queries/queries';
 
 // Query for recent posts
 // Query for recent posts
@@ -47,25 +48,23 @@ export default async function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="text-center lg:text-left">
               <span className="inline-block py-1.5 px-4 rounded-full bg-teal-100 text-teal-700 text-sm font-bold tracking-wide mb-6 uppercase">
-                Fresh Home • Happy Pet
+                Discover the Land of Smiles
               </span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6">
-                Simple Solutions for <br className="hidden lg:block" />
+                Experience the Magic of <br className="hidden lg:block" />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">
-                  Pet Hygiene
+                  Thailand
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                We test the best odor eliminators, grooming tools, and litter
-                solutions. Keep your home smelling fresh and your furry friends
-                healthy.
+                Your ultimate guide to Thailand's best beaches, temples, street food, and hidden gems. Plan your perfect trip with our expert tips.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Link
                   href="/blog"
                   className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl shadow-lg hover:shadow-teal-200/50 transition-all transform hover:-translate-y-1"
                 >
-                  Browse Reviews
+                  Start Exploring
                   <svg
                     aria-hidden="true"
                     className="w-5 h-5 ml-2"
@@ -94,7 +93,7 @@ export default async function HomePage() {
               <div className="relative w-full h-[400px] md:h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white transform rotate-2 hover:rotate-0 transition-transform duration-500">
                 <Image
                   src="/images/hero-dog.png"
-                  alt="Happy Golden Retriever in a clean home"
+                  alt="Beautiful Thailand beach landscape"
                   className="object-cover"
                   fill
                   priority
@@ -122,10 +121,10 @@ export default async function HomePage() {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-gray-400 uppercase tracking-wider">
-                    Approved
+                    Verified
                   </p>
                   <p className="font-bold text-slate-800 text-sm">
-                    Vet Recommended Products
+                    Local Expert Guides
                   </p>
                 </div>
               </div>
@@ -153,7 +152,7 @@ export default async function HomePage() {
                   d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <span>Real Owner Tested</span>
+              <span>Local Experts</span>
             </div>
             <div className="flex items-center gap-2">
               <svg
@@ -170,7 +169,7 @@ export default async function HomePage() {
                   d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
                 />
               </svg>
-              <span>Science-Backed</span>
+              <span>Verified Stays</span>
             </div>
             <div className="flex items-center gap-2">
               <svg
@@ -187,7 +186,7 @@ export default async function HomePage() {
                   d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
                 />
               </svg>
-              <span>Pet Safe Materials</span>
+              <span>Authentic Experiences</span>
             </div>
           </div>
         </div>
@@ -198,11 +197,10 @@ export default async function HomePage() {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Everything You Need for a Clean Home
+              Explore Thailand's Best
             </h2>
             <p className="text-slate-600 max-w-2xl mx-auto text-lg">
-              Owning a pet shouldn't mean compromising on hygiene. We cover
-              every angle.
+              From pristine islands to ancient temples, discover everything Thailand has to offer.
             </p>
           </div>
 
@@ -220,16 +218,21 @@ export default async function HomePage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.384-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                  />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                   />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">
-                Odor Control
+                Top Destinations
               </h3>
               <p className="text-slate-600">
-                Litter, sprays, and purification systems tested against the
-                toughest smells.
+                Explore popular islands, bustling cities, and serene mountain retreats.
               </p>
             </div>
 
@@ -246,16 +249,15 @@ export default async function HomePage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                   />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">
-                Grooming
+                Cultural Guide
               </h3>
               <p className="text-slate-600">
-                Tools and shampoos to keep your pet's coat shiny and skin
-                healthy.
+                Navigate local customs, festivals, and etiquette with confidence.
               </p>
             </div>
 
@@ -272,16 +274,15 @@ export default async function HomePage() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     strokeWidth={2}
-                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
                   />
                 </svg>
               </div>
               <h3 className="text-xl font-bold text-slate-900 mb-3">
-                Mess Cleanup
+                Food & Shopping
               </h3>
               <p className="text-slate-600">
-                Effective vacuums and spot cleaners for the inevitable
-                accidents.
+                Discover best street food spots and shopping markets.
               </p>
             </div>
           </div>
@@ -375,7 +376,7 @@ export default async function HomePage() {
                 No reviews yet
               </h3>
               <p className="text-slate-500 mb-6">
-                Our lab is busy testing new products!
+                We are curating the best Thailand travel guides for you!
               </p>
               <Link
                 href="/blog"
@@ -392,11 +393,10 @@ export default async function HomePage() {
       <section className="py-20 bg-teal-900 text-white text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-3xl font-bold mb-4">
-            Join 10,000+ Clean Pet Parents
+            Join Our Travel Community
           </h2>
           <p className="text-teal-100 mb-8">
-            Get the latest hygiene tips and product warnings delivered to your
-            inbox.
+            Get the latest Thailand travel tips and hidden gem alerts delivered to your inbox.
           </p>
           <form className="flex gap-2 max-w-md mx-auto">
             <input
@@ -417,8 +417,15 @@ export default async function HomePage() {
   );
 }
 
-export const metadata = {
-  title: 'PetHygieneLab.com - Solutions for Pet Smell & Hygiene',
-  description:
-    'Expert reviews on pet odor eliminators, grooming tools, and hygiene solutions. Keep your home fresh and your pets healthy.',
-};
+export async function generateMetadata() {
+  const { data: settings } = await sanityFetch({
+    query: settingsQuery,
+  });
+
+  return {
+    title: settings?.title || 'ThaiTravel',
+    description:
+      settings?.description ||
+      'Your ultimate guide to Thailand travel. Discover best destinations, food, and culture.',
+  };
+}

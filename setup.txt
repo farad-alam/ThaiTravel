@@ -1,4 +1,6 @@
 1. Sanity project creation -> Cross Origin setup (Localhost)
 2. Replace .env.local with Newly created sanity details
 3. Replace "Ignite for Sanity" with "ThaiTravel Admin" in sanity.config.ts
-4. 
+4. Deploy to vercel and provide env variables
+5. Then again add Cross origin on sanity for live domain
+6. add revalidate webhook in sanity for live domain

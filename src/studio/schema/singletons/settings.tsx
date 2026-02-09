@@ -17,7 +17,7 @@ export default defineType({
       description: 'This field is the title of your website.',
       title: 'Title',
       type: 'string',
-      initialValue: 'PetHygieneLab',
+      initialValue: 'ThaiTravel',
       validation: (rule) => rule.required(),
     }),
     defineField({
@@ -56,9 +56,17 @@ export default defineType({
     defineField({
       name: 'description',
       description:
-        'Used both for the <meta> description tag for SEO, and the blog subheader.',
+        'Used both for the <meta> description tag for SEO, and the home page subheader.',
       title: 'Description',
       type: 'text',
+    }),
+    defineField({
+      name: 'affiliateDisclosure',
+      title: 'Affiliate Disclosure',
+      type: 'text',
+      description: 'The affiliate disclosure text to display in the footer.',
+      initialValue:
+        'ThaiTravel is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.',
     }),
     defineField({
       name: 'socialMedia',
@@ -79,7 +87,7 @@ export default defineType({
       type: 'string',
       description:
         'Custom footer text. Use {year} for current year. Example: "© {year} YourSite. All rights reserved."',
-      initialValue: '© {year} Test Affiliate. All rights reserved.',
+      initialValue: '© {year} ThaiTravel. All rights reserved.',
     }),
     defineField({
       name: 'ogImage',

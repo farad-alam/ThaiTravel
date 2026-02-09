@@ -32,6 +32,7 @@ export const settingsQuery = defineQuery(`*[_type == "settings"][0]{
   googleSiteVerificationId,
   googleAnalyticsId,
   footerText,
+  affiliateDisclosure,
   ${menuFragment}
 }`);
 
